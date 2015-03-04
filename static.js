@@ -35,6 +35,12 @@ http.createServer(function(req, res){
 				res.writeHead(200, {"Content-Type": "text/javascript"});
 			} else if (urlObj.pathname.indexOf(".css") != -1) {
 				res.writeHead(200, {"Content-Type": "text/css"});
+			} else if (urlObj.pathname.indexOf(".html") != -1) {
+				res.writeHead(200, {"Content-Type": "text/html"});
+			} else if (urlObj.pathname.indexOf(".jpg") != -1) {
+				res.writeHead(200, {"Content-Type": "image/jpeg"});
+			} else if (urlObj.pathname.indexOf(".gif") != -1) {
+				res.writeHead(200, {"Content-Type": "image/gif"});
 			} else {
 				res.writeHead(200);
 			}
